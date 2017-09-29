@@ -1,0 +1,10 @@
+<div class="container">
+  <% if @game.next_player.type == :computer %>
+    <%= render partial: "static_board", locals: { board: @game.board, game_options: @game_options } %>
+    <% content_for :refresh do %>
+      <meta http-equiv="refresh" content="1; URL=<%= url_for @game_options %>">
+    <% end %>
+  <% else %>
+    <%= render partial: "playable_board", locals: { board: @game.board, game_options: @game_options } %>
+  <% end %>
+</div>

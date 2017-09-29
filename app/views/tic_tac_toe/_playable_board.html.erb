@@ -1,0 +1,15 @@
+  <div class="board">
+    <% board.rows_as_square_numbers_and_statuses.each do |row| %>
+      <div class="row">
+        <% row.each do |(number, status)| %>
+          <div class="square" id="square_<%= number %>">
+            <% if status == :empty %>
+              <%= link_to number, game_options.merge({ move: number }) %>
+            <% else %>
+              <%= status.upcase %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
