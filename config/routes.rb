@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'tic_tac_toe/options'
+
+  get 'tic_tac_toe/game'
+
+  root 'tic_tac_toe#options'
 end
