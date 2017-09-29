@@ -1,2 +1,6 @@
-<h1>TicTacToe#options</h1>
-<p>Find me in app/views/tic_tac_toe/options.html.erb</p>
+<div class="container">
+  <div><%= link_to "Human vs Human", action: :game, player_x_type: :human, player_o_type: :human  %></div>
+  <div><%= link_to "Human vs Computer", action: :game, player_x_type: :human, player_o_type: :computer %></div>
+  <div><%= link_to "Computer vs Human", action: :game, player_x_type: :computer, player_o_type: :human %></div>
+  <div><%= link_to "Computer vs Computer", action: :game, player_x_type: :computer, player_o_type: :computer  %></div>
+</div>
