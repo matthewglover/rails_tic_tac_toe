@@ -1,0 +1,15 @@
+<div class="container">
+  <%= render partial: "static_board", locals: { board: @board } %>
+  <div class="result_message">
+    <div class="headline">
+      <% if @board.winner? %>
+        <%= @board.winner.upcase %> Wins!
+      <% else %>
+        It's a draw!
+      <% end %>
+    </div>
+    <div class="play_again">
+      <%= link_to "Play again", "/"  %>
+    </div>
+  </div>
+</div>

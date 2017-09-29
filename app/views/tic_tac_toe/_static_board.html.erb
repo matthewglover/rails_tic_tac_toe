@@ -1,0 +1,12 @@
+  <div class="board">
+    <% board.rows_as_square_numbers_and_statuses.each do |row| %>
+      <div class="row">
+        <% row.each do |(number, status)| %>
+          <div class="square" id="square_<%= number %>">
+            <%= status == :empty ? number : status.upcase  %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
